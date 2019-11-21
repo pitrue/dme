@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
+    />
+    <title>Document</title>
+    <style>
+      .table {
+        text-align: left;
+        background: #f3f3f3;
+        padding: 1rem;
+        width: 100%;
+        position: relative;
+      }
+      .table thead th {
+        font-family: sans-serif;
+        color: #8a8a8a;
+        padding: 0.5rem 0;
+      }
+      .table tbody td {
+        padding: 0.5rem;
+        background: #ddd;
+      }
+      .table tbody td span {
+        margin-top: 0.3rem;
+        font-weight: 600;
+        color: #565656;
+        display: block;
+        font-size: 1rem;
+      }
+      .table tbody tr:nth-child(odd) td {
+          background:none;
+      }
+      #data {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Координаты</th>
+          <th>Скорость (км/ч)</th>
+          <th>Курс</th>
+          <th>Высота (м)</th>
+          <th>Коды (вылет - назначение)</th>
+          <th>Рейс</th>
+        </tr>
+      </thead>
+      <tbody id="data"></tbody>
+    </table>
+
+    <script src="./haversine.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
